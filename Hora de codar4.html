@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function alunos() {
+    var alunoslistas=[];
+
+    while(true) {
+        var nome = prompt("Informe o nome do aluno(ou 'pare' para cancelar)");
+        
+        if (nome.toLowerCase () === "pare"){
+            break; 
+        }
+
+        alunoslistas.push(nome);
+    }
+        document.write("<p>Quantidade de alunos : "  +  alunoslistas.length +"</p>");
+
+        var nomedosalunos="Listas de Alunos: <br>";
+   for(var i=0;i<alunoslistas.length; i++){
+    nomedosalunos += (i + 1) + ". " + alunoslistas[i] + "<br>";
+            }
+            document.write(nomedosalunos);
+   }
+    
+
+alunos();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
