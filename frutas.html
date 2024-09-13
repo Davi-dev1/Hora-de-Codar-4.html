@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+var frutas=["maçã","pera","uva","banana","mamão","abacate","melão","laranja"];
+var  entrada_ou_saida=[];
+
+function listas(){
+    listaString=entrada_ou_saida.join(",");
+         if (listaString === "") {
+    listaString = "Não há itens na sua lista.";
+
+}
+alert( "Listas de compras :  " +listaString  );
+}
+
+function Add_ou_remover(){
+var fruta=prompt("Digite a fruta (ou digite 'sair' para encerrar o programa):").toLowerCase();
+
+if(fruta === 'sair'){
+  listas();
+  return;
+}
+if(frutas.includes(fruta)){
+    var index=entrada_ou_saida.indexOf(fruta);
+    if (index===-1){
+        entrada_ou_saida.push(fruta);
+}else{
+    entrada_ou_saida.splice(index,1);
+}
+
+listas();
+ } else {
+ alert("Fruta não encontrada na lista de frutas.");
+}
+Add_ou_remover();
+}
+window.onload = function() {
+            Add_ou_remover();
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
